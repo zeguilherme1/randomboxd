@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+    font: message-box;
+    background-color: #14181c;
+}
+#main-title {
+    text-align: center;
+}
+#cachorrinho {
+     max-width: 250px;
+}
+
+#footer {
+    justify-content: end;
+    text-align: center;
+    padding: 10px 0;
+
+}
+#main-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1; 
+}
+
+#get_movie {
+    border-radius: 6px;
+    font-size: 18px;
+    position: relative;
+    background-color: #04c04c;
+    border: none;
+}
+
+#get_user {
+    border-radius: 6px;
+    font-size: 18px;
+    position: relative;
+    background-color: #eb7704;
+    border: none;
+}
+
+#username {
+    border-radius: 6px;
+    font-size: 18px;
+    position: relative;
+    border: none;
+}
+
+#username {
+    width: 400px;
+    padding: 6px, 12px;
+}
+
+#get_movie, #get_user {
+    width: 200px;
+}
+
+#spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+
+#spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #40bcf4;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
