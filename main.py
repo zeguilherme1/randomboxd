@@ -19,7 +19,10 @@ def get_movie():
 	user_instance = user.User(username)
 	watchlist = user_instance.get_watchlist()
 	print(watchlist)
-	watchlist_movies = ([movie["name"] for movie in watchlist["data"].values()])
+	watchlist_movies = [
+    	{"name": movie["name"], "url": movie["url"]}
+    	for movie in watchlist["data"].values()
+	]
  
 	if not watchlist_movies:
 		return jsonify({"Error:": "Your watchlist is empty"})

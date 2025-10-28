@@ -17,6 +17,8 @@ let moviesArray = [];
 document.getElementById("get_user").addEventListener("click", async () => {
   const username = document.getElementById("username").value;
   const result = document.getElementById("result");
+  const resultLink = document.getElementById("resultLink");
+
 
   showSpinner();
 
@@ -33,7 +35,9 @@ document.getElementById("get_user").addEventListener("click", async () => {
     console.log(data);
     moviesArray = data.movies;
     if (moviesArray && moviesArray.length > 0) {
-      result.innerText = getRandomMovie(moviesArray);
+      const randomMovie = getRandomMovie(moviesArray);
+      result.innerText = randomMovie.name;
+      resultLink.innerHTML = `<a href="${randomMovie.url}" target="_blank">Check it on letterboxd!</a>`;
     } else {
       result.innerText = "Empty watchlist";
     }
@@ -44,6 +48,12 @@ document.getElementById("get_user").addEventListener("click", async () => {
 
 document.getElementById("get_movie").addEventListener("click", async () => {
   const result = document.getElementById("result");
-
-  result.innerText = getRandomMovie(moviesArray);
+  const resultLink = document.getElementById("resultLink");
+  if (moviesArray && moviesArray.length > 0) {
+    const randomMovie = getRandomMovie(moviesArray);
+    result.innerText = randomMovie.name;
+    resultLink.innerHTML = `<a href="${randomMovie.url}" target="_blank">Check it on letterboxd!</a>`;
+  } else {
+    result.innerText = "Empty watchlist";
+  }
 });

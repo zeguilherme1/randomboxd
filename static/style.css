@@ -7,11 +7,13 @@ body {
     font: message-box;
     background-color: #14181c;
 }
+
 #main-title {
     text-align: center;
 }
+
 #cachorrinho {
-     max-width: 250px;
+    max-width: 250px;
 }
 
 #footer {
@@ -20,13 +22,14 @@ body {
     padding: 10px 0;
 
 }
+
 #main-container {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    flex: 1; 
+    flex: 1;
 }
 
 #get_movie {
@@ -57,7 +60,8 @@ body {
     padding: 6px, 12px;
 }
 
-#get_movie, #get_user {
+#get_movie,
+#get_user {
     width: 200px;
 }
 
@@ -81,6 +85,10 @@ body {
     width: 40px;
     height: 40px;
     animation: spin 1s linear infinite;
+}
+
+a {
+    color: inherit;
 }
 
 @keyframes spin {
